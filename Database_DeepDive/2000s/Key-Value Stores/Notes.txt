@@ -1,0 +1,22 @@
+Key-Value Stores are the simplest type of NoSQL databases, storing data as key-value pairs. Each key is unique and maps directly to a value, which can be a simple data type or a complex object.
+
+Popular Systems:
+
+Redis
+Amazon DynamoDB (Key-Value mode)
+Riak KV
+Use Cases:
+
+Caching
+Session Management
+Real-Time Analytics
+
+
+
+JavaScript Examsple: Using Redis with Node.js
+
+Prerequisites:
+
+Node.js installed
+Redis installed and running locally or accessible via a cloud service like Redis Cloud
+Redis Node.js Client installed

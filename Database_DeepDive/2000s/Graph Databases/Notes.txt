@@ -1,0 +1,19 @@
+Graph Databases are designed to handle data with complex relationships, using graph structures with nodes, edges, and properties. They excel in scenarios where understanding and traversing relationships is crucial.
+
+Popular Systems:
+
+Neo4j
+Amazon Neptune
+OrientDB
+Use Cases:
+
+Social Networks
+Recommendation Engines
+Fraud Detection
+Knowledge Graphs
+JavaScript Example: Using Neo4j with Node.js
+Prerequisites:
+
+Node.js installed
+Neo4j installed and running locally or accessible via a cloud service like Neo4j Aura
+Neo4j JavaScript Driver installed

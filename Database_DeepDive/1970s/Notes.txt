@@ -1,0 +1,24 @@
+The Relational Model
+Overview
+The Relational Model revolutionized data management by introducing a declarative approach to data manipulation and organization. Instead of specifying how to navigate data structures (as in hierarchical or network models), the relational model allows users to specify what data they want, letting the system handle the how.
+
+Key Concepts:
+
+Tables (Relations): Data is organized into tables, which consist of rows and columns.
+Rows (Tuples): Each row represents a unique record in the table.
+Columns (Attributes): Each column represents a data field with a specific datatype.
+Primary Keys: Unique identifiers for each row in a table.
+Foreign Keys: References to primary keys in other tables, establishing relationships between tables.
+Normalization: Process of organizing data to minimize redundancy and improve data integrity.
+Advantages of the Relational Model
+Simplicity: Intuitive table-based structure.
+Flexibility: Easy to add or modify tables and relationships.
+Data Integrity: Enforces rules through constraints (e.g., primary keys, foreign keys).
+Declarative Querying: Users can specify what data they need without detailing the retrieval process.
+Scalability: Suitable for a wide range of applications, from small to large-scale systems.
+SQL: The Language of Relational Databases
+SQL (Structured Query Language) is the standard language used to interact with relational databases. It allows users to perform a variety of operations, including:
+
+Data Definition Language (DDL): Define and modify database structures.
+Data Manipulation Language (DML): Insert, update, delete, and retrieve data.
+Data Control Language (DCL): Control access to data.

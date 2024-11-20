@@ -1,0 +1,67 @@
+SQL: The Language of Relational Databases
+SQL (Structured Query Language) is the standard language used to interact with relational databases. It allows users to perform a variety of operations, including:
+
+Data Definition Language (DDL): Define and modify database structures.
+Data Manipulation Language (DML): Insert, update, delete, and retrieve data.
+Data Control Language (DCL): Control access to data.
+Common SQL Operations
+Creating Tables:
+
+CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    DepartmentID INT,
+    Email VARCHAR(100),
+    FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID)
+);
+
+CREATE TABLE Departments (
+    DepartmentID INT PRIMARY KEY,
+    DepartmentName VARCHAR(100)
+);
+Inserting Data:
+
+
+INSERT INTO Departments (DepartmentID, DepartmentName)
+VALUES
+    (1, 'Engineering'),
+    (2, 'Human Resources'),
+    (3, 'Marketing');
+
+INSERT INTO Employees (EmployeeID, FirstName, LastName, DepartmentID, Email)
+VALUES
+    (101, 'Alice', 'Smith', 1, 'alice.smith@techcorp.com'),
+    (102, 'Bob', 'Johnson', 2, 'bob.johnson@techcorp.com'),
+    (103, 'Charlie', 'Williams', 1, 'charlie.williams@techcorp.com');
+Querying Data:
+
+Selecting All Employees:
+
+
+SELECT * FROM Employees;
+Selecting Specific Columns:
+
+
+SELECT FirstName, LastName, Email FROM Employees;
+Joining Tables:
+
+
+SELECT Employees.FirstName, Employees.LastName, Departments.DepartmentName
+FROM Employees
+JOIN Departments ON Employees.DepartmentID = Departments.DepartmentID;
+Updating Data:
+
+
+UPDATE Employees
+SET Email = 'alice.s@techcorp.com'
+WHERE EmployeeID = 101;
+Deleting Data:
+
+
+DELETE FROM Employees
+WHERE EmployeeID = 103;
+Creating Indexes:
+
+
+CREATE INDEX idx_department ON Employees (DepartmentID);

@@ -1,0 +1,16 @@
+Overview
+1960s: Emergence of DBMS
+In the 1960s, the concept of Database Management Systems (DBMS) emerged to centralize data storage and management, moving away from the inefficient and inconsistent file-based systems. Two primary models dominated this era:
+
+Hierarchical Model
+Network Model
+Hierarchical vs. Network Models
+Hierarchical Model:
+
+Structure: Tree-like, where each record has a single parent, forming a strict hierarchy.
+Example Systems: IBM's IMS (Information Management System).
+Network Model:
+
+Structure: Graph-like, allowing multiple parent and child records, enabling more complex relationships.
+Example Systems: CODASYL DBTG (Database Task Group).
+

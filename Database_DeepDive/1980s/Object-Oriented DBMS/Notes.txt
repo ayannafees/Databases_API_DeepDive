@@ -1,0 +1,32 @@
+Key Features
+An Object-Oriented DBMS (OODBMS) integrates object-oriented programming principles directly into the database system. Here's how it aligns with OOP concepts:
+
+Objects and Classes:
+
+Objects: Instances that contain both data (attributes) and behaviors (methods).
+Classes: Blueprints defining the structure and behaviors of objects.
+Inheritance:
+
+Objects can inherit properties and methods from parent classes, promoting reusability.
+Encapsulation:
+
+Data and methods are bundled together, hiding internal states and requiring all interaction to be performed through methods.
+Polymorphism:
+
+Objects can be treated as instances of their parent class, allowing for flexible and dynamic method invocation.
+Complex Data Types:
+
+Support for nested objects and complex structures beyond simple scalar types.
+Advantages and Disadvantages
+Advantages:
+
+Seamless Integration with OOP: Direct mapping between application objects and database objects reduces impedance mismatch.
+Reusability and Extensibility: Inheritance and polymorphism promote code reuse and flexible system design.
+Encapsulation: Enhances data security by restricting direct access to object internals.
+Disadvantages:
+
+Complexity: Managing object relationships and inheritance hierarchies can be complex.
+Performance Overheads: Object storage and retrieval may introduce performance penalties compared to relational systems.
+Limited Adoption: OODBMSs were less widely adopted, leading to fewer tools and community support.
+JavaScript Example: Simulating an OODBMS
+While JavaScript isn't traditionally used for OODBMS, we can simulate an object-oriented database using JavaScript classes and JSON files to store objects. This example demonstrates how objects with inheritance can be managed in a file-based system.

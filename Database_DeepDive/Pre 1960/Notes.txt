@@ -1,0 +1,16 @@
+Understanding File-Based Systems
+In a file-based system, data is stored in flat files such as plain text, JSON, CSV, or XML files. Each application handles its own data storage and retrieval by reading from and writing to these files directly. This approach has several drawbacks:
+
+Redundancy: Multiple applications may store the same data independently, leading to duplicated information.
+Inconsistency: Without a centralized system to enforce data integrity, different files might have conflicting or outdated information.
+Scalability Issues: Managing large amounts of data through flat files can become cumbersome and inefficient.
+Lack of Concurrent Access Control: Handling multiple read/write operations simultaneously can lead to data corruption.
+Example Scenario
+Imagine two separate applications that manage a list of users. Both applications store user data in their own JSON files. This setup leads to redundancy and potential inconsistencies.
+
+Demonstration with Node.js
+We'll create two simple applications:
+
+App A: Manages user data in appA_users.json.
+App B: Manages user data in appB_users.json.
+Both applications perform basic operations: adding a user and retrieving all users.

@@ -1,0 +1,18 @@
+Column-Family Stores organize data into column families, which are groups of related columns. This structure allows for efficient storage and retrieval of large datasets, especially when dealing with sparse data.
+
+Popular Systems:
+
+Apache Cassandra
+HBase
+ScyllaDB
+Use Cases:
+
+Time-Series Data
+Real-Time Big Data Analytics
+IoT Data Storage
+JavaScript Example: Using Cassandra with Node.js
+Prerequisites:
+
+Node.js installed
+Apache Cassandra installed and running locally or accessible via a cloud service like DataStax Astra
+Cassandra Node.js Driver installed

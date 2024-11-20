@@ -1,0 +1,5 @@
+Concept
+The Hierarchical Model organizes data in a tree structure. Each parent node can have multiple child nodes, but each child node has only one parent. This model is efficient for one-to-many relationships.
+
+Real-World Analogy
+Think of an organizational chart where each manager (parent) oversees multiple employees (children), but each employee reports to only one manager.

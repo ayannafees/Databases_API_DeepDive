@@ -1,0 +1,6 @@
+Network Model Example
+Concept
+The Network Model allows records to have multiple parent and child relationships, forming a graph structure. This model is suitable for representing complex many-to-many relationships.
+
+Real-World Analogy
+Consider a university system where Students can enroll in multiple Courses, and each Course can have multiple Students.

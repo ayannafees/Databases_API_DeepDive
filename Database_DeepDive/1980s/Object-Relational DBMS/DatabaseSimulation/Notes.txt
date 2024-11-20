@@ -1,0 +1,5 @@
+JavaScript Example: Using an ORM to Simulate ORDBMS
+In practice, Object-Relational Mapping (ORM) libraries bridge the gap between object-oriented application code and relational databases. We'll use Sequelize, a popular ORM for Node.js, to demonstrate how ORDBMS features can be utilized.
+
+Scenario
+We'll enhance our previous Employee-Department system to include object-oriented features like inheritance. For example, let's differentiate between FullTimeEmployee and PartTimeEmployee, inheriting common attributes from a base Employee model.

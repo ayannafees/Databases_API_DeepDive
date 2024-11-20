@@ -1,0 +1,67 @@
+Setting Up a MongoDB Replica Set
+For demonstration purposes, we'll use Docker to set up a simple MongoDB replica set with one primary and two secondary nodes.
+
+Using Docker for Easy Setup
+Docker simplifies the setup process by allowing us to run MongoDB instances in isolated containers.
+
+Prerequisites:
+Docker: Ensure Docker is installed on your machine. Install Docker
+Step-by-Step Setup:
+Create a Docker Network:
+
+This allows containers to communicate with each other.
+
+docker network create mongo-replica-set
+Start MongoDB Containers:
+
+We'll start three MongoDB instances: one primary and two secondaries.
+
+# Primary Node
+docker run -d --name mongo-primary --network mongo-replica-set -p 27017:27017 mongo:latest --replSet rs0
+
+# Secondary Node 1
+docker run -d --name mongo-secondary1 --network mongo-replica-set -p 27018:27017 mongo:latest --replSet rs0
+
+# Secondary Node 2
+docker run -d --name mongo-secondary2 --network mongo-replica-set -p 27019:27017 mongo:latest --replSet rs0
+Initialize the Replica Set:
+
+Access the primary node and initiate the replica set configuration.
+
+docker exec -it mongo-primary mongo
+
+# Inside the Mongo Shell:
+rs.initiate(
+  {
+    _id: "rs0",
+    members: [
+      { _id: 0, host: "mongo-primary:27017" },
+      { _id: 1, host: "mongo-secondary1:27017" },
+      { _id: 2, host: "mongo-secondary2:27017" }
+    ]
+  }
+)
+Expected Output:
+
+{
+  "ok" : 1,
+  "operationTime" : Timestamp(1633065600, 1),
+  "$clusterTime" : {
+    "clusterTime" : Timestamp(1633065600, 1),
+    "signature" : {
+      "hash" : BinData(0,"AAAAAAAAAAAAAAAAAAAAAAAAAAA="),
+      "keyId" : NumberLong(0)
+    }
+  }
+}
+Verify Replica Set Status:
+
+rs.status()
+Expected Output:
+
+You should see all three nodes with their respective roles. Initially, one node is primary, and the others are secondaries.
+
+Ensure Secondaries Are Ready:
+
+Secondaries need to catch up with the primary. You can check their status in the rs.status() output.
+

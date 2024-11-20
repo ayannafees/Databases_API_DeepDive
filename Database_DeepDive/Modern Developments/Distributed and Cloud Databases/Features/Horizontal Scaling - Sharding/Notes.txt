@@ -1,0 +1,21 @@
+Understanding Horizontal Scaling and Sharding
+Horizontal Scaling
+Horizontal Scaling refers to adding more machines or nodes to a system to distribute the load and manage increased data volume. Unlike Vertical Scaling, which involves enhancing the capabilities of a single machine (e.g., adding more CPU or RAM), horizontal scaling improves performance and reliability by leveraging multiple machines.
+
+Sharding
+Sharding is a method of horizontal scaling where the dataset is partitioned into smaller, more manageable pieces called shards. Each shard is stored on a separate database instance or server. Sharding ensures that no single database becomes a bottleneck, enhancing both scalability and performance.
+
+Key Concepts:
+
+Shard Key: A specific field used to determine the distribution of data across shards.
+Shard: A subset of the overall dataset stored on a separate database instance.
+Balancing: Ensuring data is evenly distributed to prevent any shard from becoming overloaded.
+
+Scenario Overview
+Imagine you're building a large-scale application that manages user profiles. As the number of users grows, a single database becomes insufficient to handle the load efficiently. To address this, you'll implement sharding to distribute user data across multiple MongoDB databases based on the userId.
+
+Objectives:
+
+Distribute Data: Split user data across multiple shards based on userId.
+Balance Load: Ensure each shard handles an approximately equal amount of data.
+Maintain Accessibility: The application should transparently interact with the appropriate shard without manual intervention.
